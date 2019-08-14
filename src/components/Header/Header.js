@@ -10,10 +10,10 @@ export const Header = () => {
       <div className="header__content content">
         <div className="logo">
           <span className="logo__text">SKILL STACK</span>
-          <div>
-            <Button name="LOGIN" />
-            <Button name="SIGNIN" />
-          </div>
+        </div>
+        <div className="header__buttons">
+          <Button className="header__button" name="LOGIN" />
+          <Button className="header__button" name="SIGNIN" />
         </div>
       </div>
     </header>
