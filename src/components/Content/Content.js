@@ -3,6 +3,7 @@ import React from "react";
 import { Card } from "../Card/Card";
 
 import "./Content.sass";
+import { Section } from "../Section/Section";
 
 const data_courses = [
   {
@@ -59,8 +60,7 @@ const data_teacher = [
 export const Content = () => {
   return (
     <div className="section courses">
-      <span className="title title_main">Курсы:</span>
-      <div className="cards-wrapper">
+      <Section title="Курсы:">
         {data_courses.map((item, index) => {
           return (
             <Card
@@ -70,9 +70,8 @@ export const Content = () => {
             />
           );
         })}
-      </div>
-      <span className="title title_main">Преподаватели: </span>
-      <div className="cards-wrapper">
+      </Section>
+      <Section title="Преподаватели:">
         {data_teacher.map((item, index) => {
           return (
             <Card
@@ -82,7 +81,7 @@ export const Content = () => {
             />
           );
         })}
-      </div>
+      </Section>
     </div>
   );
 };
