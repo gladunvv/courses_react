@@ -12,7 +12,7 @@ export const Header = () => {
           <span className="logo__text">SKILL STACK</span>
         </div>
         <div className="header__buttons">
-          <Button className="header__button" name="LOGIN" />
+          <Button link="/login" className="header__button" name="LOGIN" />
           <Button className="header__button" name="SIGNIN" />
         </div>
       </div>

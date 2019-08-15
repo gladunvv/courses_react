@@ -1,6 +1,11 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./Button.sass";
-export const Button = ({ name, className }) => {
-  return <button className={`button ${className}`}>{name}</button>;
+
+export const Button = ({ link, name, className }) => {
+  return (
+    <Link to={link} className={`button ${className}`}>
+      {name}
+    </Link>
+  );
 };

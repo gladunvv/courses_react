@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 
+import { Route, Switch } from "react-router-dom";
+
 import { Header } from "./components/Header/Header";
-import { StartedScreen } from "./components/StartedScreen/StartedScreen";
-import { Content } from "./components/Content/Content";
-import { Partners } from "./components/Partners/Parthers";
-import "./styles/App.sass";
 import { Footer } from "./components/Footer/Footer";
+import { MainPage } from "./pages/MainPage/MainPage";
+import { Login } from "./pages/Login/Login";
+
+import "./styles/App.sass";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Header />
-        <StartedScreen />
-        <Content />
-        <Partners />
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route path="/login" component={Login} />
+        </Switch>
         <Footer />
       </div>
     );
