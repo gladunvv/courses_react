@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Header } from "./components/Header/Header";
 import { StartedScreen } from "./components/StartedScreen/StartedScreen";
-
+import { Content } from "./components/Content/Content";
 import "./styles/App.sass";
 
 class App extends Component {
@@ -11,6 +11,7 @@ class App extends Component {
       <div>
         <Header />
         <StartedScreen />
+        <Content />
       </div>
     );
   }
