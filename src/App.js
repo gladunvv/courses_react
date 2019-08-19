@@ -8,7 +8,7 @@ import { MainPage } from "./pages/MainPage/MainPage";
 import { Login } from "./pages/Login/Login";
 
 import "./styles/App.sass";
-import { SignIn } from "./pages/SignIn/SignIn";
+import SignIn from "./pages/SignIn/SignIn";
 
 class App extends Component {
   render() {
