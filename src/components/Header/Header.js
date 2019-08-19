@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button } from "../Button/Button";
+import { Link } from "react-router-dom";
 
 import "./Header.sass";
 
@@ -9,11 +10,13 @@ export const Header = () => {
     <header className="header">
       <div className="header__content content">
         <div className="logo">
-          <span className="logo__text">SKILL STACK</span>
+          <Link to="/" className="logo__text">
+            SKILL STACK
+          </Link>
         </div>
         <div className="header__buttons">
           <Button link="/login" className="header__button" name="LOGIN" />
-          <Button className="header__button" name="SIGNIN" />
+          <Button link="/signin" className="header__button" name="SIGNIN" />
         </div>
       </div>
     </header>
