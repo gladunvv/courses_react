@@ -8,6 +8,9 @@ module.exports = {
     filename: "index_bundle.js"
   },
   devServer: {
+    proxy: {
+      "/api": "http://127.0.0.1:8000"
+    },
     historyApiFallback: true,
     open: true,
     hot: true
