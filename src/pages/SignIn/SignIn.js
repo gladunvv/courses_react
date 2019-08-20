@@ -9,22 +9,32 @@ export default class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      firstName: "",
       response: {}
     };
+    this.handaleInputChange = this.handaleInputChange.bind(this);
   }
 
   handleRegistrationProcess(event) {
     event.preventDefault();
     axios
-      .post("/register")
+      .post("api/v1/users/createuser/")
       .then(response => {
+        console.log("Успешно");
         console.log(response);
         this.setState({ response: response }); // здесь ты берёшь ответ и записываешь его в state
       })
       .catch(error => console.log(error)); // здесь должна быть обработка ошибок. Но это потом
   }
+  handaleInputChange(event) {
+    const {
+      target: { name, value }
+    } = event;
+    this.setState({ [name]: value });
+  }
 
   render() {
+    console.log(this.state);
     return (
       <div className="signin">
         <form
@@ -33,6 +43,9 @@ export default class SignIn extends React.Component {
         >
           <span className="signin__text">Регистрация</span>
           <Input
+            value={this.state.firstName}
+            onChange={this.handaleInputChange}
+            name="firstName"
             className="signin__input"
             placeholder="First Name"
             type="text"

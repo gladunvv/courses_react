@@ -8,18 +8,17 @@ module.exports = {
     filename: "index_bundle.js"
   },
   devServer: {
+    // publicPath: "/build/",
+    // host: "localhost",
+    // port: 8081,
     proxy: {
-      "/api": {
-        target: "http://localhost:5000",
-        pathRewrite: { "^/api": "" }
-      }
-    }
-    // historyApiFallBack: true,
-    // progress: true,
-    // hot: true,
-    // inline: true,
-    // open: true,
+      "/api": "http://localhost:8000/"
+      // secure: false,
+      // changeOrigin: true
+    },
+    historyApiFallback: true
   },
+
   module: {
     rules: [
       {
