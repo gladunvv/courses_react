@@ -13,7 +13,8 @@ export default class SignIn extends React.Component {
     };
   }
 
-  handleRegistrationProcess() {
+  handleRegistrationProcess(event) {
+    event.preventDefault();
     axios
       .post("/register")
       .then(response => {
@@ -26,7 +27,10 @@ export default class SignIn extends React.Component {
   render() {
     return (
       <div className="signin">
-        <form className="form form-signin">
+        <form
+          className="form form-signin"
+          onSubmit={this.handleRegistrationProcess}
+        >
           <span className="signin__text">Регистрация</span>
           <Input
             className="signin__input"
@@ -50,11 +54,7 @@ export default class SignIn extends React.Component {
             placeholder="Repeat password"
             type="password"
           />
-          <Button
-            link="/regiser"
-            className="signin__button"
-            name="Зарегестрироваться"
-          />
+          <button>Зарег</button>
         </form>
       </div>
     );

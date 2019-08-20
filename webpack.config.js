@@ -9,11 +9,16 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      "/api": "http://127.0.0.1:8000"
-    },
-    historyApiFallback: true,
-    open: true,
-    hot: true
+      "/api": {
+        target: "http://localhost:5000",
+        pathRewrite: { "^/api": "" }
+      }
+    }
+    // historyApiFallBack: true,
+    // progress: true,
+    // hot: true,
+    // inline: true,
+    // open: true,
   },
   module: {
     rules: [

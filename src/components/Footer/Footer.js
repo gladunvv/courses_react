@@ -7,23 +7,23 @@ import Facebook from "../../static/icons/icons8-facebook-100.png";
 
 export const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="footer__content content">
-        <div class="logo">
-          <span class="footer__title">Skill Stack</span>
+    <footer className="footer">
+      <div className="footer__content content">
+        <div className="logo">
+          <span className="footer__title">Skill Stack</span>
         </div>
-        <div class="footer__links">
-          <a class="footer__link" href="#">
-            <img class="footer__img" src={Skype} alt="" />
+        <div className="footer__links">
+          <a className="footer__link" href="#">
+            <img className="footer__img" src={Skype} alt="" />
           </a>
-          <a class="footer__link" href="#">
-            <img class="footer__img" src={Telegram} alt="" />
+          <a className="footer__link" href="#">
+            <img className="footer__img" src={Telegram} alt="" />
           </a>
-          <a class="footer__link" href="#">
-            <img class="footer__img" src={Twitter} alt="" />
+          <a className="footer__link" href="#">
+            <img className="footer__img" src={Twitter} alt="" />
           </a>
-          <a class="footer__link" href="#">
-            <img class="footer__img" src={Facebook} alt="" />
+          <a className="footer__link" href="#">
+            <img className="footer__img" src={Facebook} alt="" />
           </a>
         </div>
       </div>

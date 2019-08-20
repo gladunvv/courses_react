@@ -9,16 +9,16 @@ import Slurm from "../../static/images/Slurm.png";
 
 export const Partners = () => {
   return (
-    <section class="partners section">
-      <span class="title title_main">Наши партнеры:</span>
-      <p class="text" />
-      <div class="partners__images">
-        <img class="partners__img" src={Slurm} alt="" />
-        <img class="partners__img" src={Nuka} alt="" />
-        <img class="partners__img" src={Duff} alt="" />
-        <img class="partners__img" src={Umbrella} alt="" />
-        <img class="partners__img" src={LosPolos} alt="" />
-        <img class="partners__img" src={Kahuna} alt="" />
+    <section className="partners section">
+      <span className="title title_main">Наши партнеры:</span>
+      <p className="text" />
+      <div className="partners__images">
+        <img className="partners__img" src={Slurm} alt="" />
+        <img className="partners__img" src={Nuka} alt="" />
+        <img className="partners__img" src={Duff} alt="" />
+        <img className="partners__img" src={Umbrella} alt="" />
+        <img className="partners__img" src={LosPolos} alt="" />
+        <img className="partners__img" src={Kahuna} alt="" />
       </div>
     </section>
   );
