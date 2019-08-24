@@ -8,7 +8,7 @@ import { MainPage } from "./pages/MainPage/MainPage";
 import { Login } from "./pages/Login/Login";
 
 import "./styles/App.sass";
-import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/login" component={Login} />
-          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
         </Switch>
         <Footer />
       </div>
